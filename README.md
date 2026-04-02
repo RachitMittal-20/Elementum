@@ -2,6 +2,8 @@
 
 Elementum is a bold, editorial-style landing page for a creative strategy studio. It combines a hero narrative, animated feature flow, testimonials, and a newsletter CTA with layered textures, animated accents, and scroll-driven motion.
 
+Live site: https://elementum-zeta.vercel.app/
+
 ## Highlights
 
 - Immersive hero composition with animated curves, scribbles, and floating avatars
