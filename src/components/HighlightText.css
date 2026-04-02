@@ -1,0 +1,13 @@
+.highlight {
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  display: inline;
+}
+
+.highlight-green {
+  background: var(--color-green);
+}
+
+.highlight-yellow {
+  background: var(--color-yellow);
+}

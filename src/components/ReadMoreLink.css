@@ -1,0 +1,19 @@
+.read-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  border-bottom: 1.5px solid var(--color-primary);
+  padding-bottom: 2px;
+  transition: gap 0.3s;
+}
+
+.read-more-link:hover {
+  gap: 14px;
+}
+
+.read-more-link span {
+  transition: transform 0.3s;
+}

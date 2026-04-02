@@ -1,0 +1,32 @@
+:root {
+  --color-primary: #1a1a1a;
+  --color-text: #444;
+  --color-text-light: #666;
+  --color-text-muted: #888;
+  --color-text-faint: #aaa;
+  --color-white: #fff;
+  --color-bg-light: #f8f8f8;
+  --color-border: #e0e0e0;
+  --color-border-light: #eee;
+  --color-green: #c6f740;
+  --color-green-end: #a8e063;
+  --color-yellow: #ffe066;
+  --color-orange: #ff6b35;
+  --color-pink: #ff8ec4;
+  --color-pink-dark: #ff6bb5;
+  --color-red: #ff4d4d;
+  --color-purple: #7c3aed;
+  --color-purple-light: #c084fc;
+
+  --font-sans: 'Questrial', sans-serif;
+  --font-serif: 'Questrial', sans-serif;
+  --font-display: 'Questrial', sans-serif;
+
+  --container-max: 1200px;
+  --container-padding: 40px;
+  --container-padding-mobile: 20px;
+
+  --radius-sm: 4px;
+  --radius-md: 20px;
+  --radius-full: 50px;
+}

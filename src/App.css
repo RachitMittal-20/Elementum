@@ -1,0 +1,101 @@
+:root {
+  --scroll-progress: 0%;
+  --pointer-x: 50vw;
+  --pointer-y: 30vh;
+}
+
+.page-grain,
+.page-spotlight {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page-grain {
+  opacity: 0.18;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.08) 0 0.8px, transparent 1px),
+    radial-gradient(circle at 80% 40%, rgba(0, 0, 0, 0.05) 0 0.7px, transparent 1px),
+    radial-gradient(circle at 50% 80%, rgba(0, 0, 0, 0.04) 0 0.8px, transparent 1px);
+  background-size: 18px 18px, 22px 22px, 26px 26px;
+  mix-blend-mode: multiply;
+  animation: grainDrift 12s steps(6) infinite;
+}
+
+.page-spotlight {
+  background:
+    radial-gradient(320px circle at var(--pointer-x) var(--pointer-y), rgba(221, 239, 223, 0.38), transparent 70%),
+    radial-gradient(220px circle at calc(var(--pointer-x) + 40px) calc(var(--pointer-y) - 20px), rgba(242, 129, 132, 0.1), transparent 72%);
+  opacity: 0.75;
+  transition: background 0.16s ease-out;
+}
+
+/* Scroll animation base */
+.animate-on-scroll {
+  opacity: 0;
+  filter: blur(14px);
+  transform: translateY(34px) scale(0.985);
+  transition:
+    opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
+
+.page-section {
+  position: relative;
+  scroll-margin-top: 120px;
+}
+
+body:not(.page-ready) .hero__scribble path,
+body:not(.page-ready) .hero__curve,
+body:not(.page-ready) .hero__accent-purple,
+body:not(.page-ready) .hero__avatar,
+body:not(.page-ready) .feature-flow__line-main,
+body:not(.page-ready) .feature-flow__line-shadow,
+body:not(.page-ready) .feature-flow__glow,
+body:not(.page-ready) .feature-flow__underline::after,
+body:not(.page-ready) .feature-flow__image,
+body:not(.page-ready) .feature-flow__kite,
+body:not(.page-ready) .feature-flow__triangle,
+body:not(.page-ready) .feature-flow__offer-line path,
+body:not(.page-ready) .feature-flow__offer-badge,
+body:not(.page-ready) .testimonials-showcase__avatar,
+body:not(.page-ready) .newsletter-band__scribble path,
+body:not(.page-ready) .newsletter-band__blob {
+  animation-play-state: paused !important;
+}
+
+@keyframes grainDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(6px, -8px, 0);
+  }
+
+  50% {
+    transform: translate3d(-4px, 6px, 0);
+  }
+
+  75% {
+    transform: translate3d(8px, 4px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-spotlight {
+    opacity: 0.38;
+  }
+}

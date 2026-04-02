@@ -1,0 +1,21 @@
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: 50px;
+}
+
+.wave-divider--pink {
+  position: relative;
+  height: 60px;
+  overflow: visible;
+  margin: 20px 0;
+}
+
+.wave-divider--pink svg {
+  height: 60px;
+}
